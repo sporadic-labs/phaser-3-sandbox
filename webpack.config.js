@@ -61,7 +61,6 @@ module.exports = function(env, argv) {
         }
       ]),
 
-      // Not sure why Phaser 3 made the decision to rely on globals, but so be it:
       new webpack.DefinePlugin({ WEBGL_RENDERER: true, CANVAS_RENDERER: true, PRODUCTION: !isDev })
     ],
     devtool: isDev ? "eval-source-map" : "source-map"
