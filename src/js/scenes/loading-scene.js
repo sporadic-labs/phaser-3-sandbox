@@ -7,7 +7,6 @@ import { SCENE_NAME } from "./index.js";
 
 export default class LoadingScene extends Phaser.Scene {
   preload() {
-    const globals = this.registry.parent.globals;
 
     // Images
     // const atlasPath = `resources/atlases`;

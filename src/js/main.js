@@ -19,10 +19,6 @@ document.getElementById(containerId).addEventListener("contextmenu", e => {
   return false;
 });
 
-// Create the space for globals on the game object
-const globals = (game.globals = {});
-globals.plugins = {};
-
 game.scene.add(SCENE_NAME.LOADING, Loading);
 game.scene.add(SCENE_NAME.TEST, Test);
 game.scene.start(SCENE_NAME.LOADING);
