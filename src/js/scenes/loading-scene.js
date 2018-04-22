@@ -7,31 +7,20 @@ import { SCENE_NAME } from "./index.js";
 
 export default class LoadingScene extends Phaser.Scene {
   preload() {
-
-    // Images
-    // const atlasPath = `resources/atlases`;
-    // this.load.atlas("assets", `${atlasPath}/assets.png`, `${atlasPath}/assets.json`);
-    this.load.image("ship", "resources/images/ship.png");
-
-    // Stand-in for a loading bar
-    this.loadingText = this.add.text(750 / 2, 750 / 2, "0%", {
-      font: "200px Arial",
-      fill: "#fff",
-      align: "center"
+    const loadingBar = this.add.graphics();
+    this.load.on("progress", value => {
+      loadingBar.clear();
+      loadingBar.fillStyle(0xffffff, 1);
+      loadingBar.fillRect(0, 750 / 2 - 25, 750 * value, 50);
     });
-    this.loadingText.setOrigin(0.5);
-  }
+    this.load.on("complete", () => loadingBar.destroy());
 
-  loadRender() {
-    this.loadingText.setText(this.load.progress + "%");
+    this.load.setPath("resources/");
+    this.load.atlas("assets", "atlases/assets.png", "atlases/assets.json");
+    this.load.image("ship", "images/ship.png");
   }
 
   create() {
-    // Since load progress might not reach 100 in the load loop, manually do it
-    this.loadingText.setText("100%");
-  }
-
-  update() {
     this.scene.start(SCENE_NAME.TEST);
   }
 }
