@@ -57,7 +57,7 @@ module.exports = function(env, argv) {
         {
           from: "./resources",
           to: "resources/",
-          ignore: ["atlases/assets/**", "*.tps"]
+          ignore: ["atlases/assets/**/*", "**/*.tps"]
         }
       ]),
 
