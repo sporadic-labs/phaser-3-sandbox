@@ -33,7 +33,6 @@ module.exports = function(env, argv) {
           ]
         },
 
-        //   Ensure that urls in scss are loaded correctly
         {
           test: /\.(eot|svg|ttf|woff|woff2|png|jpg)$/,
           use: {
@@ -58,9 +57,7 @@ module.exports = function(env, argv) {
         {
           from: "./resources",
           to: "resources/",
-          ignore: [
-            /* Nothing to ignore yet, but soon... */
-          ]
+          ignore: ["atlases/assets/**", "*.tps"]
         }
       ]),
 
