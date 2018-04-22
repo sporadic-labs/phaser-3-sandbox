@@ -3,7 +3,7 @@
  */
 
 import Phaser from "phaser";
-import { GAME_STATE_NAMES } from "./index.js";
+import { SCENE_NAME } from "./index.js";
 
 export default class LoadingScene extends Phaser.Scene {
   preload() {
@@ -33,6 +33,6 @@ export default class LoadingScene extends Phaser.Scene {
   }
 
   update() {
-    this.scene.start(GAME_STATE_NAMES.TEST);
+    this.scene.start(SCENE_NAME.TEST);
   }
 }

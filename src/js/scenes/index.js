@@ -1,10 +1,9 @@
 import Loading from "./loading-scene";
 import Test from "./test-scene";
 
-const GAME_STATE_NAMES = {
-  NOT_BOOTED: "NOT_BOOTED",
+const SCENE_NAME = {
   LOADING: "LOADING",
   TEST: "TEST"
 };
 
-export { Loading, Test, GAME_STATE_NAMES };
+export { Loading, Test, SCENE_NAME };
