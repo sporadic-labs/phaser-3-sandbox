@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 import RotatingSprite from "../game-objects/rotating-sprite";
 import RotatingSpriteAsComponent from "../game-objects/rotating-sprite-as-component";
+import GameObjectExtendingLifecycle from "../game-objects/go-extending-lifecycle";
 
 export default class Scene extends Phaser.Scene {
   create() {
@@ -9,6 +10,8 @@ export default class Scene extends Phaser.Scene {
 
     this.spriteContainer = new RotatingSpriteAsComponent(this, 300, 100, "assets", "ship");
     this.spriteContainer.sprite.setScale(2);
+
+    this.rotatingGameObject = new GameObjectExtendingLifecycle(this, 100, 300, "assets", "ship");
   }
 
   update(time, delta) {
@@ -20,6 +23,10 @@ export default class Scene extends Phaser.Scene {
       if (this.spriteContainer) {
         this.spriteContainer.destroy();
         this.spriteContainer = null;
+      }
+      if (this.rotatingGameObject) {
+        this.rotatingGameObject.destroy();
+        this.rotatingGameObject = null;
       }
     }
   }
