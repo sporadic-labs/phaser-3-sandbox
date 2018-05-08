@@ -5,6 +5,7 @@ export default class RotatingGameObject extends LifecycleObject {
     super(scene);
 
     this.sprite = scene.add.sprite(x, y, texture, frame);
+    this.sprite.setScale(3);
   }
 
   preUpdate(time, delta) {
