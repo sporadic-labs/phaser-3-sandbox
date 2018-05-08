@@ -7,7 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 
 module.exports = function(env, argv) {
-  const isDev = argv.mode !== "development";
+  const isDev = argv.mode === "development";
 
   return {
     mode: "development",
