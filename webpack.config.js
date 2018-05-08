@@ -10,7 +10,7 @@ module.exports = function(env, argv) {
   const isDev = argv.mode === "development";
 
   return {
-    mode: "development",
+    mode: isDev ? "development" : "production",
     context: path.resolve(__dirname, "src"),
     entry: "./js/main.js",
     cache: true,
