@@ -19,12 +19,12 @@ export default class MovementContoller {
 
   update(time, delta) {
     const body = this.physicsBody;
-    const heading = body.rotation;
+    const heading = (body.rotation + 90) * Math.PI / 180;
 
     if (this.keys.left.isDown) body.setAngularVelocity(-200);
     else if (this.keys.right.isDown) body.setAngularVelocity(200);
 
-    if (this.keys.up.isDown) this.physics.velocityFromRotation(heading, 200, body.acceleration);
+    if (this.keys.up.isDown) body.acceleration.setToPolar(heading, 200);
     else body.setAcceleration(0);
   }
 
