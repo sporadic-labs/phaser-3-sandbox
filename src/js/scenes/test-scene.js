@@ -3,6 +3,10 @@ import GameObjectExtendingLifecycle from "../game-objects/go-extending-lifecycle
 
 export default class Scene extends Phaser.Scene {
   create() {
+    this.add
+      .tileSprite(0, 0, 750, 750, "assets", "subtle-pattern-ep-natural-black")
+      .setOrigin(0, 0);
+
     this.rotatingGameObject = new GameObjectExtendingLifecycle(this, 100, 300, "assets", "ship");
   }
 
