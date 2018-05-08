@@ -10,7 +10,8 @@ const game = new Phaser.Game({
   parent: containerId,
   width: gameDimensions,
   height: gameDimensions,
-  backgroundColor: "#0bf"
+  backgroundColor: "#000",
+  pixelArt: true
 });
 
 // Disable right click menu
