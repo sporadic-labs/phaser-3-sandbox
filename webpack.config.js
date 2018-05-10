@@ -61,7 +61,11 @@ module.exports = function(env, argv) {
         }
       ]),
 
-      new webpack.DefinePlugin({ WEBGL_RENDERER: true, CANVAS_RENDERER: true, PRODUCTION: !isDev })
+      new webpack.DefinePlugin({
+        "typeof CANVAS_RENDERER": JSON.stringify(true),
+        "typeof WEBGL_RENDERER": JSON.stringify(true),
+        PRODUCTION: !isDev
+      })
     ],
     devtool: isDev ? "eval-source-map" : "source-map"
   };
