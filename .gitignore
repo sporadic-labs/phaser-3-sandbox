@@ -1,5 +1,3 @@
-# Compiled typings
-typings
 
 # Ignore sublime workspace
 *.sublime-workspace
@@ -8,6 +6,7 @@ typings
 _assets
 
 # Server-side dependencies
+types
 node_modules
 
 # Ignore the built version of the site
