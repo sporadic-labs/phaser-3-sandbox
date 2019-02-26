@@ -1,6 +1,8 @@
 import Phaser from "phaser";
 import GameObjectExtendingLifecycle from "../game-objects/go-extending-lifecycle";
 import Player from "../game-objects/player/";
+import PlayerName from "../game-objects/player-name/index";
+import store from "../store/index";
 
 export default class Scene extends Phaser.Scene {
   create() {
@@ -10,6 +12,7 @@ export default class Scene extends Phaser.Scene {
 
     this.rotatingGameObject = new GameObjectExtendingLifecycle(this, 100, 300, "assets", "ship");
 
+    new PlayerName(this, store);
     new Player(this, 50, 50);
   }
 
