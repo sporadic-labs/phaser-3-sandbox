@@ -1,3 +1,8 @@
-# Sandbox
+# Phaser 3 Sandbox
 
-Working on a sandbox for Phaser 3 games that favors composition over inheritance.
+WIP sandbox for our games that features:
+
+- React UI demo
+- MobX game store
+- SCSS
+- GO as components
