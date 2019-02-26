@@ -26,9 +26,6 @@ module.exports = {
       experimentalObjectRestSpread: true
     }
   },
-  settings: {
-    react: { pragma: "h" }
-  },
   globals: {
     Phaser: true
   }
