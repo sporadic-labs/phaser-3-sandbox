@@ -1,17 +1,7 @@
 {
-  "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": ["last 2 versions"]
-        }
-      }
-    ]
-  ],
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
   "plugins": [
-    ["transform-react-jsx", { "pragma": "h" }],
-    ["transform-class-properties", { "loose": true }],
-    "transform-object-rest-spread"
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    "@babel/plugin-proposal-object-rest-spread"
   ]
 }
