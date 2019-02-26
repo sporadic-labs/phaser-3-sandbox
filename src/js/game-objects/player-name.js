@@ -1,5 +1,5 @@
 import { autorun } from "mobx";
-import EventProxy from "../../helpers/event-proxy";
+import EventProxy from "../helpers/event-proxy";
 
 export default class PlayerName {
   /**

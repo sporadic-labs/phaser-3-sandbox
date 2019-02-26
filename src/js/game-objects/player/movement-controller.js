@@ -13,13 +13,11 @@ export default class MovementContoller {
       right: scene.input.keyboard.addKey(RIGHT),
       up: scene.input.keyboard.addKey(UP)
     };
-
-    // Register destroy via pub/sub
   }
 
   update(time, delta) {
     const body = this.physicsBody;
-    const heading = (body.rotation + 90) * Math.PI / 180;
+    const heading = ((body.rotation + 90) * Math.PI) / 180;
 
     if (this.keys.left.isDown) body.setAngularVelocity(-200);
     else if (this.keys.right.isDown) body.setAngularVelocity(200);
