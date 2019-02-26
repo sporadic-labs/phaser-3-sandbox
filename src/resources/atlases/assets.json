@@ -25,12 +25,12 @@
 	"sourceSize": {"w":400,"h":400}
 }},
 "meta": {
-	"app": "http://www.codeandweb.com/texturepacker",
+	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "assets.png",
 	"format": "RGBA8888",
 	"size": {"w":402,"h":486},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:cbc70e95704003943991d91f41e0d4a9:0cd57f3e24eb6727cb03b576946c2a28:a759b6bbc8381ac9c472b28f589ad0d6$"
+	"smartupdate": "$TexturePacker:SmartUpdate:f5904b2675460ee0d79a5a1a3c51ece9:0cd57f3e24eb6727cb03b576946c2a28:a759b6bbc8381ac9c472b28f589ad0d6$"
 }
 }
