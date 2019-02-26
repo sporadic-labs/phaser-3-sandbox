@@ -3,7 +3,7 @@ import EventProxy from "../../helpers/event-proxy";
 
 export default class Player {
   constructor(scene, x, y) {
-    this.sprite = scene.add.sprite(x, y, "assets", "kenney-ship.png");
+    this.sprite = scene.add.sprite(x, y, "assets", "kenney-ship");
     scene.physics.world.enable(this.sprite);
     this.movementController = new MovementController(this, this.sprite.body, scene);
 
