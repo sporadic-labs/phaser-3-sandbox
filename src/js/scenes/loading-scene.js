@@ -1,7 +1,3 @@
-/**
- * LoadingScene - this is the loading screen
- */
-
 import Phaser from "phaser";
 import { SCENE_NAME } from "./index.js";
 
