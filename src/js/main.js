@@ -1,6 +1,7 @@
 import "../css/main.scss";
 import Phaser from "phaser";
 import { Loading, Test, SCENE_NAME } from "./scenes";
+import "./ui-app/";
 
 const gameDimensions = 750;
 const containerId = "game-container";
