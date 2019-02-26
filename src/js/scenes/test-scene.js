@@ -13,7 +13,7 @@ export default class Scene extends Phaser.Scene {
     this.rotatingGameObject = new GameObjectExtendingLifecycle(this, 100, 300, "assets", "ship");
 
     new PlayerName(this, store);
-    new Player(this, 50, 50);
+    new Player(this, 300, 300);
   }
 
   update(time, delta) {
